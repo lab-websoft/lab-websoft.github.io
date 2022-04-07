@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      // loading indicator
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.remove();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <a href="/" class="logo"
+          ><svg
+            width="105"
+            height="40"
+            viewBox="0 0 240 110"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.740376 108V5.75999H11.6844V97.632H62.8044V108H0.740376ZM105.176 109.44C95.0964 109.44 86.6004 105.792 79.6884 98.496C72.7764 91.2 69.3204 82.368 69.3204 72C69.3204 61.632 72.7764 52.8 79.6884 45.504C86.6004 38.208 95.0964 34.56 105.176 34.56C110.648 34.56 115.784 35.808 120.584 38.304C125.48 40.8 129.224 44.064 131.816 48.096V36H141.896V108H131.816V95.904C129.224 99.936 125.48 103.2 120.584 105.696C115.784 108.192 110.648 109.44 105.176 109.44ZM87.0324 92.016C92.0244 97.392 98.4084 100.08 106.184 100.08C113.96 100.08 120.296 97.392 125.192 92.016C130.184 86.544 132.68 79.872 132.68 72C132.68 64.128 130.184 57.504 125.192 52.128C120.296 46.656 113.96 43.92 106.184 43.92C98.4084 43.92 92.0244 46.656 87.0324 52.128C82.1364 57.504 79.6884 64.128 79.6884 72C79.6884 79.872 82.1364 86.544 87.0324 92.016ZM203.354 109.44C197.882 109.44 192.698 108.192 187.802 105.696C183.002 103.2 179.306 99.936 176.714 95.904V108H166.634V-8.58307e-06H176.714V48.096C179.306 44.064 183.002 40.8 187.802 38.304C192.698 35.808 197.882 34.56 203.354 34.56C213.434 34.56 221.93 38.208 228.842 45.504C235.754 52.8 239.21 61.632 239.21 72C239.21 82.368 235.754 91.2 228.842 98.496C221.93 105.792 213.434 109.44 203.354 109.44ZM183.194 92.016C188.186 97.392 194.57 100.08 202.346 100.08C210.122 100.08 216.458 97.392 221.354 92.016C226.346 86.544 228.842 79.872 228.842 72C228.842 64.128 226.346 57.504 221.354 52.128C216.458 46.656 210.122 43.92 202.346 43.92C194.57 43.92 188.186 46.656 183.194 52.128C178.298 57.504 175.85 64.128 175.85 72C175.85 79.872 178.298 86.544 183.194 92.016Z"
+              fill="#83ff58"
+            />
+            <path
+              d="M0.740376 108V5.75999H11.6844V97.632H62.8044V108H0.740376ZM105.176 109.44C95.0964 109.44 86.6004 105.792 79.6884 98.496C72.7764 91.2 69.3204 82.368 69.3204 72C69.3204 61.632 72.7764 52.8 79.6884 45.504C86.6004 38.208 95.0964 34.56 105.176 34.56C110.648 34.56 115.784 35.808 120.584 38.304C125.48 40.8 129.224 44.064 131.816 48.096V36H141.896V108H131.816V95.904C129.224 99.936 125.48 103.2 120.584 105.696C115.784 108.192 110.648 109.44 105.176 109.44ZM87.0324 92.016C92.0244 97.392 98.4084 100.08 106.184 100.08C113.96 100.08 120.296 97.392 125.192 92.016C130.184 86.544 132.68 79.872 132.68 72C132.68 64.128 130.184 57.504 125.192 52.128C120.296 46.656 113.96 43.92 106.184 43.92C98.4084 43.92 92.0244 46.656 87.0324 52.128C82.1364 57.504 79.6884 64.128 79.6884 72C79.6884 79.872 82.1364 86.544 87.0324 92.016ZM203.354 109.44C197.882 109.44 192.698 108.192 187.802 105.696C183.002 103.2 179.306 99.936 176.714 95.904V108H166.634V-8.58307e-06H176.714V48.096C179.306 44.064 183.002 40.8 187.802 38.304C192.698 35.808 197.882 34.56 203.354 34.56C213.434 34.56 221.93 38.208 228.842 45.504C235.754 52.8 239.21 61.632 239.21 72C239.21 82.368 235.754 91.2 228.842 98.496C221.93 105.792 213.434 109.44 203.354 109.44ZM183.194 92.016C188.186 97.392 194.57 100.08 202.346 100.08C210.122 100.08 216.458 97.392 221.354 92.016C226.346 86.544 228.842 79.872 228.842 72C228.842 64.128 226.346 57.504 221.354 52.128C216.458 46.656 210.122 43.92 202.346 43.92C194.57 43.92 188.186 46.656 183.194 52.128C178.298 57.504 175.85 64.128 175.85 72C175.85 79.872 178.298 86.544 183.194 92.016Z"
+              fill="#83ff58"
+              fill-opacity="0.6"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="right">
+        <a href="/">Home </a>
+        <a href="/about.html" class="selected">About Us</a>
+      </div>
+      <div class="menu-toggle">Toggle</div>
+    </div>
+    <div class="sections-container">
+      <div class="section">
+        <div class="center">
+          <h1 class="big">About Us</h1>
+          <p class="semi-big">
+            Lab is created by Zeon.
+            <br />We are a team of 2 people from the USA and UK. <br />Lab is
+            the world's first collaborative web OS. It runs in the browser and
+            syncs up with a server so your team can work together.
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="center">
+          <h1 class="big">How was Lab built?</h1>
+          <p class="semi-big">
+            Lab is built with Node, Express, and EJS. <br />
+            We created a custom JavaScript framework that runs on the client
+            that allows us to create custom components. <br />
+            We also created a templating language based on HTML called LXT (LX
+            Template).
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <img src="/desktop.png" />
+        <div class="center">
+          <h1 class="big">Full customization</h1>
+          <p class="semi-big">
+            Lab is customizable to your needs.
+            <br />
+            You can change the look and feel of Lab to match your brand.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="semi-big">
+          &copy; <a href="https://zeon.dev">zeon.dev</a> 2022
+        </p>
+      </div>
+    </div>
+    <div class="loader">
+      <span> Loading... </span>
+    </div>
+  </body>
+</html>

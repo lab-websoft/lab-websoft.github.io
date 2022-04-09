@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <script>
       // loading indicator
+      window.addEventListener("DOMContentLoaded", () => {
+        const loader = document.createElement("div");
+        loader.classList.add("loader");
+        loader.innerHTML = `<span> Loading... </span>`;
+        document.body.appendChild(loader);
+      });
       window.addEventListener("load", () => {
         const loader = document.querySelector(".loader");
         loader.remove();
@@ -48,8 +54,7 @@
         <div class="center">
           <h1 class="big">The <span class="t">web OS</span> of the future</h1>
           <p class="semi-big">
-            Welcome to Lab, the cleanest web OS you’ll ever see,<br />focused on
-            productivity and collaboration.
+            Welcome to Lab, the cleanest web OS you’ll ever see, focused on productivity and collaboration.
           </p>
         </div>
       </div>
@@ -65,7 +70,6 @@
         <img src="oobeforlanding.png" />
       </div>
       <div class="section">
-        <img src="desktop.png" />
         <div class="center">
           <h1 class="big">Full customization</h1>
           <p class="semi-big">
@@ -74,15 +78,13 @@
             You can change the look and feel of Lab to match your brand.
           </p>
         </div>
+        <img src="desktop.png" />
       </div>
       <div class="footer">
         <p class="semi-big">
-          &copy; <a href="https://zeon.dev">zeon.dev</a> 2022
+          &copy; <a href="https://zeon.dev">zeon.dev</a> 2022 &mdash; All rights reserved.
         </p>
       </div>
-    </div>
-    <div class="loader">
-      <span> Loading... </span>
     </div>
   </body>
 </html>
